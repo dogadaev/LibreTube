@@ -31,6 +31,7 @@ import com.github.libretube.obj.ShareData
 import com.github.libretube.ui.adapters.VideosAdapter
 import com.github.libretube.ui.base.DynamicLayoutManagerFragment
 import com.github.libretube.ui.dialogs.ShareDialog
+import com.github.libretube.ui.extensions.setupBlockButton
 import com.github.libretube.ui.extensions.setupSubscriptionButton
 import com.github.libretube.ui.sheets.AddChannelToGroupSheet
 import com.github.libretube.util.deArrow
@@ -154,6 +155,7 @@ class ChannelFragment : DynamicLayoutManagerFragment() {
         val shareData = ShareData(currentChannel = response.name)
 
         val channelId = channelId ?: return@launch
+        val channelName = channelName ?: return@launch
 
         binding.channelSubscribe.setupSubscriptionButton(
             channelId,
@@ -162,6 +164,8 @@ class ChannelFragment : DynamicLayoutManagerFragment() {
         ) { isSubscribed ->
             _binding?.addToGroup?.isVisible = isSubscribed
         }
+
+        binding.channelBlock.setupBlockButton(channelId, channelName)
 
         binding.channelShare.setOnClickListener {
             val bundle = bundleOf(

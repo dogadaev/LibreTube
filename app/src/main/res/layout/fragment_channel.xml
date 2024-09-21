@@ -92,6 +92,16 @@
                             android:textSize="12sp"
                             tools:targetApi="m" />
 
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/channel_block"
+                            style="@style/PlayerActionsButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:stateListAnimator="@null"
+                            android:text="@string/block"
+                            android:textSize="12sp"
+                            tools:targetApi="m" />
+
                     </LinearLayout>
 
                     <HorizontalScrollView

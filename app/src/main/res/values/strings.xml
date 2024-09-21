@@ -7,6 +7,8 @@
     <string name="yes">Yes</string>
     <string name="search_hint">Search</string>
     <string name="videos">Videos</string>
+    <string name="block">Block</string>
+    <string name="unblock">Unblock</string>
     <string name="subscribe">Subscribe</string>
     <string name="unsubscribe">Unsubscribe</string>
     <string name="share">Share</string>
